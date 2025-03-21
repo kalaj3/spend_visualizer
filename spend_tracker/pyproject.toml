@@ -1,0 +1,24 @@
+[project]
+name = "spend-tracker"
+version = "0.1.0"
+description = ""
+authors = [{ name = "Jacob Kalinovskiy", email = "jkalinovskiy@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "customtkinter (>=5.2.2,<6.0.0)",
+    "tk (>=0.1.0,<0.2.0)",
+    "matplotlib (>=3.10.1,<4.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+test_csv_reader = "spend_tracker.main:test_csv_reader"
+test_outlier = "spend_tracker.main:test_outlier"
+test_gui_past = "spend_tracker.main:test_gui_past"
+test_table_gui = "spend_tracker.main:test_table_gui"
